@@ -1,0 +1,384 @@
+(saveFormat "7.0")
+(date "Thu 24/Oct/2013 09:18:16 ")
+(veerev "9.31.16125.0")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig)
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 47)
+(popupTitleText "Untitled")
+(popupMoveable 1))
+(deviceList
+(device 0 START25
+(properties
+(variableScope cont)))
+(device 2 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "Kondi"))
+(initValue Text
+(data  ""))))
+(device 3 INPUTDLG
+(properties
+(variableScope cont)
+(position 285 202)
+(prompt "Indtast Kondi")
+(valueConstraint "strLen(value)>0")
+(vErrorMessage "You must enter text."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "text")))
+(device 4 IFTHENELSE
+(properties
+(name "If A == B")
+(variableScope cont)
+(cases 1 "A==B"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 6 TEXTDISPLAY
+(properties
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 7 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 25 FORMULA
+(properties
+(name "strFromThru(str,from,thru)")
+(variableScope cont)
+(expr 1 "strFromThru(str,from,thru)"))
+(interface
+(input 1
+(name "str")
+(optional yes))
+(input 2
+(name "from")
+(optional yes))
+(input 3
+(name "thru")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 26 FORMULA
+(properties
+(name "strLen(str)")
+(variableScope cont)
+(expr 1 "strLen(str)"))
+(interface
+(input 1
+(name "str")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 27 FORMULA
+(properties
+(name "strLen(str)")
+(variableScope cont)
+(expr 1 "strLen(str)"))
+(interface
+(input 1
+(name "str")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 28 FORRANGE
+(properties
+(variableScope cont)
+(from 0)
+(thru 5)
+(step 1))
+(interface
+(input 1
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Data")
+(lock name constraints))))
+(device 30 FORRANGE
+(properties
+(variableScope cont)
+(from 0)
+(thru 5)
+(step 1))
+(interface
+(input 1
+(name "Thru")
+(tag "Thru")
+(requires
+(datatype Real64)
+(shape "Scalar"))
+(lock constraints)
+(optional yes)
+(buffer YES))
+(output 1
+(name "Data")
+(lock name constraints))))
+(device 31 FORMULA
+(properties
+(name "strFromThru(str,from,thru)")
+(variableScope cont)
+(expr 1 "strFromThru(str,from,thru)"))
+(interface
+(input 1
+(name "str")
+(optional yes))
+(input 2
+(name "from")
+(optional yes))
+(input 3
+(name "thru")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 32 SCROLLINGTEXTDISPLAY
+(properties
+(variableScope cont)
+(logSize 256))
+(interface
+(input 1
+(name "Data"))))
+(device 33 SCROLLINGTEXTDISPLAY
+(properties
+(variableScope cont)
+(logSize 256))
+(interface
+(input 1
+(name "Data"))))
+(configuration
+(connect D0:0 D1:0)
+(connect D0:0 D2:0)
+(connect D1:1 D3:1)
+(connect D2:1 D3:2)
+(connect D5:1 D4:1)
+(connect D3:1 D5:1)
+(connect D3:2 D5:2)
+(connect D1:1 D6:1)
+(connect D9:1 D6:2)
+(connect D9:1 D6:3)
+(connect D2:1 D7:1)
+(connect D1:1 D8:1)
+(connect D8:1 D9:1)
+(connect D7:1 D10:1)
+(connect D2:1 D11:1)
+(connect D10:1 D11:2)
+(connect D10:1 D11:3)
+(connect D6:1 D12:1)
+(connect D11:1 D13:1)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 898 348)
+(wndState max)
+(active detail)
+(detail
+(extent 1126 558)
+(anchorPt -308 -5)
+(configuration
+(devCarrierFor 0
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 100 90))
+(devCarrierFor 2
+(active open)
+(icon)
+(open
+(extent 174 29))
+(pinCenter 260 50))
+(devCarrierFor 3
+(active open)
+(icon)
+(open
+(extent 252 107))
+(terminals on)
+(pinCenter 310 180))
+(devCarrierFor 4
+(active open)
+(icon
+(extent 46 25))
+(open
+(extent 61 51))
+(terminals on)
+(pinCenter 505 70))
+(devCarrierFor 6
+(active open)
+(icon)
+(open
+(extent 384 136)
+(scFont "Arial" 128 bold))
+(titleFont "Arial" 12 bold)
+(pinCenter 200 330))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 630 70))
+(devCarrierFor 25
+(active open)
+(icon
+(extent 155 0))
+(open
+(extent 214 56))
+(terminals on)
+(pinCenter 1245 300))
+(devCarrierFor 26
+(active open)
+(icon
+(extent 62 0))
+(open
+(extent 92 50))
+(terminals on)
+(pinCenter 730 460))
+(devCarrierFor 27
+(active open)
+(icon
+(extent 62 0))
+(open
+(extent 92 50))
+(terminals on)
+(pinCenter 730 360))
+(devCarrierFor 28
+(active open)
+(icon
+(iconImage "loop.icn"))
+(open
+(extent 99 79))
+(pinCenter 940 300))
+(devCarrierFor 30
+(active open)
+(icon
+(iconImage "loop.icn"))
+(open
+(extent 99 79))
+(pinCenter 940 480))
+(devCarrierFor 31
+(active open)
+(icon
+(extent 155 0))
+(open
+(extent 214 56))
+(terminals on)
+(pinCenter 1245 480))
+(devCarrierFor 32
+(active open)
+(icon)
+(open
+(extent 173 167)
+(noformatter))
+(pinCenter 1540 220))
+(devCarrierFor 33
+(active open)
+(icon)
+(open
+(extent 173 167)
+(noformatter))
+(pinCenter 1540 440))
+(connect D0:0 D1:0
+(points 6 100 103 100 120 150 120 150 10 260 10 260 15))
+(connect D0:0 D2:0
+(points 6 100 103 100 120 150 120 150 90 320 90 320 106))
+(connect D1:1 D3:1
+(points 4 349 50 370 50 370 60 442 60))
+(connect D2:1 D3:2
+(points 6 488 150 500 150 500 90 430 90 430 80 442 80))
+(connect D5:1 D4:1
+(points 8 645 70 670 70 670 110 630 110 630 420 0 420 0 330 5 330))
+(connect D3:1 D5:1
+(points 2 578 60 614 60))
+(connect D3:2 D5:2
+(points 2 578 80 614 80))
+(connect D1:1 D6:1
+(points 10 349 50 370 50 370 60 410 60 410 120 620 120 620 210 1020 210 1020 280
+1095 280))
+(connect D9:1 D6:2
+(points 2 992 300 1095 300))
+(connect D9:1 D6:3
+(points 4 992 300 1070 300 1070 320 1095 320))
+(connect D2:1 D7:1
+(points 4 488 150 510 150 510 460 651 460))
+(connect D1:1 D8:1
+(points 8 349 50 370 50 370 60 410 60 410 120 620 120 620 360 651 360))
+(connect D8:1 D9:1
+(points 4 828 360 850 360 850 300 888 300))
+(connect D7:1 D10:1
+(points 4 828 460 850 460 850 480 888 480))
+(connect D2:1 D11:1
+(points 6 488 150 510 150 510 220 1010 220 1010 460 1095 460))
+(connect D10:1 D11:2
+(points 2 992 480 1095 480))
+(connect D10:1 D11:3
+(points 4 992 480 1070 480 1070 500 1095 500))
+(connect D6:1 D12:1
+(points 4 1404 300 1420 300 1420 220 1451 220))
+(connect D11:1 D13:1
+(points 4 1404 480 1420 480 1420 440 1451 440)))
+(stackingOrder 0 5 1 8 7 9 10 11 12 13 2 4 6 3))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))

@@ -1,0 +1,1103 @@
+(saveFormat "7.0")
+(date "Mon 28/Oct/2013 13:09:01 ")
+(veerev "9.31.16125.0")
+(platform "PC")
+(execMode v6)
+(prefExecMode v9)
+(filterNAN 0)
+(workspaceStackingOrder M)
+(sysconfig)
+(SaveCF no)
+(device 0 ROOTCONTEXT
+(properties
+(variableName Main)
+(variableScope glob)
+(trigMode deg)
+(nextID 54)
+(popupTitleText "Untitled")
+(popupMoveable 1))
+(deviceList
+(device 1 INPUTDLG
+(properties
+(name "Real64 Input")
+(variableScope cont)
+(popupTitle "Real64 Input")
+(prompt "Indtast V\346gt p\345 brevet i KG.")
+(initialValue "0")
+(vErrorMessage "You must enter a Real64 number between 0 and 10."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "real")))
+(device 2 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A<=20"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 3 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A<=50"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 4 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A<=100"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 5 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A<=250"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 6 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A<=2000"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 7 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A<=1000"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 8 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A<=500"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 9 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A<=1500"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 10 START25
+(properties
+(variableScope cont)))
+(device 12 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "4"))
+(initValue Text
+(data  ""))))
+(device 13 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "5.25"))
+(initValue Text
+(data  ""))))
+(device 14 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "5.75"))
+(initValue Text
+(data  ""))))
+(device 15 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "17"))
+(initValue Text
+(data  ""))))
+(device 16 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "21"))
+(initValue Text
+(data  ""))))
+(device 17 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "28"))
+(initValue Text
+(data  ""))))
+(device 18 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "9.75"))
+(initValue Text
+(data  ""))))
+(device 19 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "30"))
+(initValue Text
+(data  ""))))
+(device 20 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(input 5
+(name "E")
+(optional yes))
+(input 6
+(name "F")
+(optional yes))
+(input 7
+(name "G")
+(optional yes))
+(input 8
+(name "H")
+(optional yes))
+(output 1
+(name "Data"))))
+(device 21 TEXTDISPLAY
+(properties
+(name "PRIS")
+(variableScope cont))
+(interface
+(input 1
+(name "Data"))))
+(device 25 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "31"))
+(initValue Text
+(data  ""))))
+(device 29 FORMULA
+(properties
+(variableScope cont)
+(expr 2 "A+B+C+D" ""))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(input 2
+(name "B")
+(optional yes))
+(input 3
+(name "C")
+(optional yes))
+(input 4
+(name "D")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 30 FORMULA
+(properties
+(name "asReal64(x)")
+(variableScope cont)
+(expr 1 "asReal64(x)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 31 FORMULA
+(properties
+(name "asReal64(x)")
+(variableScope cont)
+(expr 1 "asReal64(x)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 32 MESSAGEBOX
+(properties
+(variableScope cont)
+(message "Skal det v\346re Rekommenderet?")
+(symbol Question))
+(interface
+(output 1
+(name "Yes")
+(lock name constraints))
+(output 2
+(name "No")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "Yes  No")
+(buttonLabel1 "Yes")
+(buttonLabel2 "No")
+(buttonLabel3 "")
+(bdefault "Yes")))
+(device 33 MESSAGEBOX
+(properties
+(variableScope cont)
+(message "Er det et V\346rdibrev?")
+(symbol Question))
+(interface
+(output 1
+(name "Yes")
+(lock name constraints))
+(output 2
+(name "No")
+(lock name constraints)))
+(implementation
+(customButtons 0)
+(displayMode 3)
+(buttons "Yes  No")
+(buttonLabel1 "Yes")
+(buttonLabel2 "No")
+(buttonLabel3 "")
+(bdefault "Yes")))
+(device 34 INPUTDLG
+(properties
+(name "Real64 Input")
+(variableScope cont)
+(popupTitle "Real64 Input")
+(prompt "Intast V\346rdi")
+(initialValue "0")
+(vErrorMessage "You must enter a Real64 number between 0 and 10."))
+(interface
+(output 1
+(name "Value")
+(lock name constraints))
+(output 2
+(name "Cancel")
+(lock name constraints)))
+(implementation
+(inputType "real")))
+(device 36 IFTHENELSE
+(properties
+(variableScope cont)
+(cases 1 "A<=3000"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Then")
+(lock name constraints))
+(output 2
+(name "Else")
+(lock name constraints))))
+(device 37 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "46"))
+(initValue Text
+(data  ""))))
+(device 38 FORMULA
+(properties
+(name "asReal64(x)")
+(variableScope cont)
+(expr 1 "asReal64(x)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 44 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "0"))
+(initValue Text
+(data  ""))))
+(device 45 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 46 FORMULA
+(properties
+(variableScope cont)
+(expr 1 "(A-3000)/1000"))
+(interface
+(input 1
+(name "A")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 47 FORMULA
+(properties
+(name "ceil(x)")
+(variableScope cont)
+(expr 1 "ceil(x)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(device 48 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 49 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "0"))
+(initValue Text
+(data  ""))))
+(device 50 LITERALCONSTANT
+(properties
+(name "Text")
+(variableScope cont)
+(enableEditing 1))
+(interface
+(output 1
+(name "Text")
+(lock name constraints)))
+(implementation
+(value Text
+(data  "0"))
+(initValue Text
+(data  ""))))
+(device 51 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 52 JUNCTION
+(properties
+(name "JCT")
+(variableScope cont))
+(interface
+(input 1
+(name "A"))
+(input 2
+(name "B"))
+(output 1
+(name "Data"))))
+(device 53 FORMULA
+(properties
+(name "asReal64(x)")
+(variableScope cont)
+(expr 1 "asReal64(x)"))
+(interface
+(input 1
+(name "x")
+(optional yes))
+(output 1
+(name "Result")
+(tag "Result")
+(lock name constraints)
+(optional yes))))
+(configuration
+(connect D9:0 D0:0)
+(connect D0:1 D1:1)
+(connect D1:2 D2:0)
+(connect D0:1 D2:1)
+(connect D2:2 D3:0)
+(connect D0:1 D3:1)
+(connect D3:2 D4:0)
+(connect D0:1 D4:1)
+(connect D8:2 D5:0)
+(connect D0:1 D5:1)
+(connect D7:2 D6:0)
+(connect D0:1 D6:1)
+(connect D4:2 D7:0)
+(connect D0:1 D7:1)
+(connect D6:2 D8:0)
+(connect D0:1 D8:1)
+(connect D1:1 D10:0)
+(connect D2:1 D11:0)
+(connect D3:1 D12:0)
+(connect D7:1 D13:0)
+(connect D6:1 D14:0)
+(connect D8:1 D15:0)
+(connect D4:1 D16:0)
+(connect D5:1 D17:0)
+(connect D10:1 D18:1)
+(connect D11:1 D18:2)
+(connect D12:1 D18:3)
+(connect D16:1 D18:4)
+(connect D17:1 D18:5)
+(connect D15:1 D18:6)
+(connect D14:1 D18:7)
+(connect D13:1 D18:8)
+(connect D21:1 D19:1)
+(connect D24:1 D20:0)
+(connect D22:1 D21:1)
+(connect D23:1 D21:2)
+(connect D29:1 D21:3)
+(connect D39:1 D21:4)
+(connect D37:1 D22:1)
+(connect D18:1 D23:1)
+(connect D9:0 D24:0)
+(connect D9:0 D25:0)
+(connect D25:1 D26:0)
+(connect D26:1 D27:1)
+(connect D25:1 D28:0)
+(connect D31:1 D29:1)
+(connect D25:2 D30:0)
+(connect D28:1 D31:1)
+(connect D30:1 D31:2)
+(connect D27:2 D32:0)
+(connect D26:1 D32:1)
+(connect D32:1 D33:1)
+(connect D35:1 D34:1)
+(connect D33:1 D34:2)
+(connect D38:1 D35:0)
+(connect D24:2 D36:0)
+(connect D36:1 D37:1)
+(connect D20:1 D37:2)
+(connect D27:1 D38:1)
+(connect D25:2 D38:2)
+(connect D34:1 D39:1)))
+(contextCarrier
+(wndRestoredOrigin 2 2)
+(wndRestoredExtent 702 386)
+(wndState max)
+(active detail)
+(detail
+(extent 1126 558)
+(anchorPt -100 94)
+(configuration
+(devCarrierFor 1
+(active icon)
+(icon
+(extent 77 25))
+(open
+(extent 431 107))
+(terminals on)
+(pinCenter 410 220))
+(devCarrierFor 2
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 61 51))
+(terminals on)
+(pinCenter 750 120))
+(devCarrierFor 3
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 61 51))
+(terminals on)
+(pinCenter 750 200))
+(devCarrierFor 4
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 68 51))
+(terminals on)
+(pinCenter 750 260))
+(devCarrierFor 5
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 68 51))
+(terminals on)
+(pinCenter 740 340))
+(devCarrierFor 6
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 116 51))
+(terminals on)
+(pinCenter 890 350))
+(devCarrierFor 7
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 116 51))
+(terminals on)
+(pinCenter 890 200))
+(devCarrierFor 8
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 68 51))
+(terminals on)
+(pinCenter 890 110))
+(devCarrierFor 9
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 116 51))
+(terminals on)
+(pinCenter 890 270))
+(devCarrierFor 10
+(active open)
+(icon)
+(open
+(extent 47 22))
+(title off)
+(pinCenter 270 320))
+(devCarrierFor 12
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 750 160))
+(devCarrierFor 13
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 750 230))
+(devCarrierFor 14
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 750 300))
+(devCarrierFor 15
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 890 150))
+(devCarrierFor 16
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 890 240))
+(devCarrierFor 17
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 890 310))
+(devCarrierFor 18
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 740 380))
+(devCarrierFor 19
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 890 380))
+(devCarrierFor 20
+(active icon)
+(icon
+(extent 26 85))
+(open)
+(terminals on)
+(pinCenter 550 330))
+(devCarrierFor 21
+(active open)
+(icon
+(extent 32 0))
+(open
+(extent 164 46))
+(pinCenter 270 400))
+(devCarrierFor 25
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 260 170))
+(devCarrierFor 29
+(active icon)
+(icon
+(extent 50 45))
+(open
+(extent 115 65))
+(terminals on)
+(pinCenter 430 320))
+(devCarrierFor 30
+(active icon)
+(icon
+(extent 73 15))
+(open
+(extent 102 50))
+(terminals on)
+(pinCenter 300 230))
+(devCarrierFor 31
+(active icon)
+(icon
+(extent 73 15))
+(open
+(extent 102 50))
+(terminals on)
+(pinCenter 620 330))
+(devCarrierFor 32
+(active icon)
+(icon
+(extent 81 25))
+(open
+(extent 223 134))
+(terminals on)
+(pinCenter 210 30))
+(devCarrierFor 33
+(active icon)
+(icon
+(extent 74 25))
+(open
+(extent 223 134))
+(terminals on)
+(pinCenter 350 40))
+(devCarrierFor 34
+(active icon)
+(icon
+(extent 77 25))
+(open
+(extent 431 107))
+(terminals on)
+(pinCenter 480 30))
+(devCarrierFor 36
+(active icon)
+(icon
+(extent 71 25))
+(open
+(extent 79 51))
+(terminals on)
+(pinCenter 640 0))
+(devCarrierFor 37
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 750 40))
+(devCarrierFor 38
+(active icon)
+(icon
+(extent 73 15))
+(open
+(extent 102 50))
+(terminals on)
+(pinCenter 1020 30))
+(devCarrierFor 44
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 420 70))
+(devCarrierFor 45
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 870 50))
+(devCarrierFor 46
+(active icon)
+(icon
+(extent 50 15))
+(open
+(extent 145 50))
+(terminals on)
+(pinCenter 1010 -30))
+(devCarrierFor 47
+(active icon)
+(icon
+(extent 36 15))
+(open
+(extent 75 50))
+(terminals on)
+(pinCenter 1090 120))
+(devCarrierFor 48
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 1080 240))
+(devCarrierFor 49
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 1020 210))
+(devCarrierFor 50
+(active icon)
+(icon
+(extent 25 15))
+(open
+(extent 174 29))
+(pinCenter 330 100))
+(devCarrierFor 51
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 320 150))
+(devCarrierFor 52
+(active icon)
+(icon
+(extent 26 25))
+(open)
+(terminals on)
+(pinCenter 980 150))
+(devCarrierFor 53
+(active icon)
+(icon
+(extent 73 15))
+(open
+(extent 102 50))
+(terminals on)
+(pinCenter 1080 340))
+(connect D9:0 D0:0
+(points 6 270 333 270 340 360 340 360 190 410 190 410 205))
+(connect D0:1 D1:1
+(points 6 451 210 470 210 470 140 580 140 580 120 712 120))
+(connect D1:2 D2:0
+(points 7 788 130 810 130 810 170 780 170 780 180 750 180 750 185))
+(connect D0:1 D2:1
+(points 6 451 210 470 210 470 140 580 140 580 200 712 200))
+(connect D2:2 D3:0
+(points 5 788 210 810 210 810 240 750 240 750 245))
+(connect D0:1 D3:1
+(points 10 451 210 470 210 470 140 580 140 580 200 690 200 690 250 700 250 700
+260 712 260))
+(connect D3:2 D4:0
+(points 5 788 270 800 270 800 320 740 320 740 325))
+(connect D0:1 D4:1
+(points 12 451 210 470 210 470 140 580 140 580 200 690 200 690 250 700 250 700
+270 690 270 690 340 702 340))
+(connect D8:2 D5:0
+(points 5 928 280 940 280 940 330 890 330 890 335))
+(connect D0:1 D5:1
+(points 10 451 210 470 210 470 140 580 140 580 120 690 120 690 70 830 70 830 350
+852 350))
+(connect D7:2 D6:0
+(points 5 928 120 950 120 950 170 890 170 890 185))
+(connect D0:1 D6:1
+(points 10 451 210 470 210 470 140 580 140 580 120 690 120 690 70 830 70 830 200
+852 200))
+(connect D4:2 D7:0
+(points 5 778 350 820 350 820 80 890 80 890 95))
+(connect D0:1 D7:1
+(points 10 451 210 470 210 470 140 580 140 580 120 690 120 690 70 830 70 830 110
+852 110))
+(connect D6:2 D8:0
+(points 5 928 210 950 210 950 250 890 250 890 255))
+(connect D0:1 D8:1
+(points 10 451 210 470 210 470 140 580 140 580 120 690 120 690 70 830 70 830 270
+852 270))
+(connect D1:1 D10:0
+(points 7 788 110 800 110 800 90 760 90 760 120 750 120 750 150))
+(connect D2:1 D11:0
+(points 5 788 190 800 190 800 200 750 200 750 220))
+(connect D3:1 D12:0
+(points 5 788 250 810 250 810 280 750 280 750 290))
+(connect D7:1 D13:0
+(points 7 928 100 950 100 950 80 900 80 900 110 890 110 890 140))
+(connect D6:1 D14:0
+(points 7 928 190 950 190 950 180 900 180 900 200 890 200 890 230))
+(connect D8:1 D15:0
+(points 5 928 260 950 260 950 290 890 290 890 300))
+(connect D4:1 D16:0
+(points 5 778 330 800 330 800 360 740 360 740 370))
+(connect D5:1 D17:0
+(points 5 928 340 940 340 940 350 890 350 890 370))
+(connect D10:1 D18:1
+(points 6 765 160 790 160 790 190 520 190 520 290 534 290))
+(connect D11:1 D18:2
+(points 6 765 230 780 230 780 260 510 260 510 300 534 300))
+(connect D12:1 D18:3
+(points 10 765 300 790 300 790 330 720 330 720 300 670 300 670 270 500 270 500
+310 534 310))
+(connect D16:1 D18:4
+(points 6 755 380 780 380 780 430 480 430 480 320 534 320))
+(connect D17:1 D18:5
+(points 6 905 380 940 380 940 440 470 440 470 330 534 330))
+(connect D15:1 D18:6
+(points 6 905 310 960 310 960 420 490 420 490 340 534 340))
+(connect D14:1 D18:7
+(points 6 905 240 920 240 920 410 500 410 500 350 534 350))
+(connect D13:1 D18:8
+(points 6 905 150 930 150 930 400 510 400 510 360 534 360))
+(connect D21:1 D19:1
+(points 10 457 320 470 320 470 310 480 310 480 280 370 280 370 450 170 450 170
+400 185 400))
+(connect D24:1 D20:0
+(points 5 253 20 270 20 270 70 260 70 260 160))
+(connect D22:1 D21:1
+(points 4 339 230 350 230 350 300 402 300))
+(connect D23:1 D21:2
+(points 8 659 330 680 330 680 250 500 250 500 260 380 260 380 310 402 310))
+(connect D29:1 D21:3
+(points 6 1059 30 1190 30 1190 450 380 450 380 320 402 320))
+(connect D39:1 D21:4
+(points 10 1119 340 1140 340 1140 430 790 430 790 460 460 460 460 440 390 440
+390 330 402 330))
+(connect D37:1 D22:1
+(points 6 335 150 350 150 350 200 240 200 240 230 261 230))
+(connect D18:1 D23:1
+(points 2 565 330 581 330))
+(connect D9:0 D24:0
+(points 6 270 333 270 340 150 340 150 0 210 0 210 15))
+(connect D9:0 D25:0
+(points 6 270 333 270 340 150 340 150 0 350 0 350 25))
+(connect D25:1 D26:0
+(points 5 389 30 410 30 410 0 480 0 480 15))
+(connect D26:1 D27:1
+(points 4 521 20 540 20 540 0 602 0))
+(connect D25:1 D28:0
+(points 11 389 30 410 30 410 0 530 0 530 30 540 30 540 50 730 50 730 20 750 20
+750 30))
+(connect D31:1 D29:1
+(points 4 885 50 910 50 910 30 981 30))
+(connect D25:2 D30:0
+(points 3 389 50 420 50 420 60))
+(connect D28:1 D31:1
+(points 2 765 40 854 40))
+(connect D30:1 D31:2
+(points 4 435 70 540 70 540 60 854 60))
+(connect D27:2 D32:0
+(points 5 678 10 710 10 710 -60 1010 -60 1010 -40))
+(connect D26:1 D32:1
+(points 6 521 20 540 20 540 0 580 0 580 -30 982 -30))
+(connect D32:1 D33:1
+(points 6 1037 -30 1080 -30 1080 60 1050 60 1050 120 1069 120))
+(connect D35:1 D34:1
+(points 4 1035 210 1050 210 1050 230 1064 230))
+(connect D33:1 D34:2
+(points 6 1110 120 1130 120 1130 280 1040 280 1040 250 1064 250))
+(connect D38:1 D35:0
+(points 5 995 150 1010 150 1010 160 1020 160 1020 200))
+(connect D24:2 D36:0
+(points 5 253 40 280 40 280 80 330 80 330 90))
+(connect D36:1 D37:1
+(points 6 345 100 360 100 360 120 290 120 290 140 304 140))
+(connect D20:1 D37:2
+(points 4 275 170 290 170 290 160 304 160))
+(connect D27:1 D38:1
+(points 10 678 -10 700 -10 700 0 970 0 970 120 960 120 960 130 950 130 950 140
+964 140))
+(connect D25:2 D38:2
+(points 10 389 50 420 50 420 -80 790 -80 790 20 960 20 960 110 940 110 940 160
+964 160))
+(connect D34:1 D39:1
+(points 6 1095 240 1120 240 1120 290 1020 290 1020 340 1041 340)))
+(stackingOrder 18 23 10 2 11 3 12 7 13 6 14 8 15 16 5 17 19 9 0 1 20 22 24 4 26
+31 21 35 28 25 30 36 37 34 38 32 33 27 29 39))
+(numberFormats
+(realFormat standard)
+(realSigDigits 4)
+(realRadixSpec 4)
+(integerBase decimal))))
